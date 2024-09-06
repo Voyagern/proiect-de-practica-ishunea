@@ -6,6 +6,8 @@ import CustomFilter from './CustomFilter';
 import SearchBar from './SearchBar';
 import SearchManufacturer from './SearchManufacturer';
 
+
+
  export {
      Hero,
      CustomButton,
@@ -13,5 +15,6 @@ import SearchManufacturer from './SearchManufacturer';
      Footer,
      CustomFilter,
      SearchBar,
-     SearchManufacturer
+     SearchManufacturer,
+     
  }
