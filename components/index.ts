@@ -5,6 +5,7 @@ import Footer from './Footer';
 import CustomFilter from './CustomFilter';
 import SearchBar from './SearchBar';
 import SearchManufacturer from './SearchManufacturer';
+import CarCard from './CarCard';
 
 
 
@@ -16,5 +17,5 @@ import SearchManufacturer from './SearchManufacturer';
      CustomFilter,
      SearchBar,
      SearchManufacturer,
-     
+     CarCard    
  }
