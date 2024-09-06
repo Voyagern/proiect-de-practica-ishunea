@@ -1,10 +1,11 @@
+import { CarProps } from "@/types";
 
 export async function fetchCars() {
   const headers ={
     'x-rapidapi-key': '27b1f4b8a0msha9f07dedcc1171bp140ae9jsn4517363e6c28',
 		'x-rapidapi-host': 'cars-by-api-ninjas.p.rapidapi.com'
   }
-const response = await fetch ( 'https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla' ,
+const response = await fetch ( 'https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=q3' ,
   {headers: headers,}
 );
 
@@ -26,3 +27,17 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
 
   return rentalRatePerDay.toFixed(0);
 };
+
+export const generateCarImageUrl = (car: CarProps, angle?: string) => {
+  const url = new URL("https://cdn.imagin.studio/getimage");
+  const { make, model, year } = car;
+
+  url.searchParams.append('customer', 'hrjavascript-mastery ');
+  url.searchParams.append('make', make);
+  url.searchParams.append('modelFamily', model.split(" ")[0]);
+  url.searchParams.append('zoomType', 'fullscreen');
+  url.searchParams.append('modelYear', `${year}`);
+  // url.searchParams.append('zoomLevel', zoomLevel);
+  url.searchParams.append('angle', `${angle}`);
+
+  return `${url}`;}
