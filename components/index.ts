@@ -7,6 +7,8 @@ import SearchBar from './SearchBar';
 import SearchManufacturer from './SearchManufacturer';
 import CarCard from './CarCard';
 import CarDetails from './CarDetails';
+import ShowMore from './ShowMore';
+
 
 
 
@@ -20,6 +22,8 @@ import CarDetails from './CarDetails';
      SearchBar,
      SearchManufacturer,
      CarCard,    
-     CarDetails    
+     CarDetails,
+     ShowMore
+
 
  }
